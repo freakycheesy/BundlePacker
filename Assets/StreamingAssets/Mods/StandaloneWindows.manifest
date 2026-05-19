@@ -1,0 +1,13 @@
+ManifestFileVersion: 0
+UnityVersion: 6000.0.74f1
+CRC: 288237838
+HashAppended: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: somecompany.sample.bundle
+      Dependencies:
+        Dependency_0: somecompany.samplescenes.bundle
+    Info_1:
+      Name: somecompany.samplescenes.bundle
+      Dependencies: {}
