@@ -1,6 +1,8 @@
 using UnityEngine;
-
-public interface IBundleLoader 
+namespace BundlePacker.Core
 {
-    public LoadBundleResult FindBundles();
+    public interface IBundleLoader
+    {
+        LoadBundleResult FindBundles();
+    }
 }

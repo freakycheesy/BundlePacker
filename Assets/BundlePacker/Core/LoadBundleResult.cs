@@ -1,6 +1,8 @@
 using UnityEngine;
-
-public struct LoadBundleResult
+namespace BundlePacker.Core
 {
-    public Pallet[] pallets;
+    public struct LoadBundleResult
+    {
+        public Pallet[] pallets;
+    }
 }

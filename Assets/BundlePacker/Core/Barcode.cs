@@ -1,11 +1,12 @@
 using System;
-using UnityEngine;
-
-[Serializable]
-public struct Barcode<T> where T : Crate
+namespace BundlePacker.Core
 {
-    public string id;
+    [Serializable]
+    public struct Barcode
+    {
+        public string id;
 #if UNITY_EDITOR
-    public Crate cache;
+        public Crate cache;
 #endif
+    }
 }

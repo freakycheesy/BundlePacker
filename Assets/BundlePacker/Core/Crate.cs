@@ -1,16 +1,19 @@
 using UnityEngine;
-
-public abstract class Crate : Scannable
+namespace BundlePacker.Core
 {
-    public Pallet pallet;
-    public string[] tags;
-    public bool redacted;
-    public bool unlockable;
-    public abstract Object GetAsset();
-    public abstract void SetAsset(Object asset);
-    [ContextMenu("Generate Barcode")]
-    public override void GenerateBarcode()
+    public abstract class Crate : Scannable
     {
-        id = $"{pallet.id}.{title}";
+        public Pallet pallet;
+        public string[] tags;
+        public bool redacted;
+        public bool unlockable;
+        public Mesh previewMesh;
+        public abstract Object GetAsset();
+        public abstract void SetAsset(Object asset);
+        [ContextMenu("Generate Barcode")]
+        public override void GenerateBarcode()
+        {
+            id = $"{pallet.id}.{title}".Replace(" ", "");
+        }
     }
 }

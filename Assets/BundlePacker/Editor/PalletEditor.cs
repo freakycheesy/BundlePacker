@@ -1,22 +1,25 @@
+using BundlePacker.Core;
 using UnityEditor;
 using UnityEngine;
-
-[CustomEditor(typeof(Pallet), true)]
-public class PalletEditor : Editor
+namespace BundlePacker.Editor
 {
-    private static BuildTarget m_targetPlatform = BuildTarget.NoTarget;
-    public void OnEnable()
+    [CustomEditor(typeof(Pallet), true)]
+    public class PalletEditor : UnityEditor.Editor
     {
-        m_targetPlatform = EditorUserBuildSettings.activeBuildTarget;
-    }
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-        m_targetPlatform = (BuildTarget)EditorGUILayout.EnumPopup("Platform:", m_targetPlatform);
-
-        if (GUILayout.Button("Build"))
+        private static BuildTarget m_targetPlatform = BuildTarget.NoTarget;
+        public void OnEnable()
         {
-            BundleBuilder.BuildPallet(target as Pallet, m_targetPlatform);
+            m_targetPlatform = EditorUserBuildSettings.activeBuildTarget;
+        }
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+            m_targetPlatform = (BuildTarget)EditorGUILayout.EnumPopup("Platform:", m_targetPlatform);
+
+            if (GUILayout.Button("Build"))
+            {
+                BundleBuilder.BuildPallet(target as Pallet, m_targetPlatform);
+            }
         }
     }
 }

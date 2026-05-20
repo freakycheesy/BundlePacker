@@ -1,16 +1,18 @@
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "LevelCrate", menuName = "BundlePacker/LevelCrate")]
-public class LevelCrate : Crate
+namespace BundlePacker.Core
 {
-    public string scene;
-
-    public override Object GetAsset()
+    [CreateAssetMenu(fileName = "LevelCrate", menuName = "BundlePacker/LevelCrate")]
+    public class LevelCrate : Crate
     {
-        return null;
-    }
+        [Scene] public string scene;
 
-    public override void SetAsset(Object asset)
-    {
+        public override Object GetAsset()
+        {
+            return null;
+        }
+
+        public override void SetAsset(Object asset)
+        {
+        }
     }
 }
