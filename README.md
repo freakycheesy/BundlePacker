@@ -1,7 +1,9 @@
 # BundlePacker
 
-Build unity asset bundles!
+Asset Management system built on top of AssetBundles
 
-- Made for modding support/modding games
+- Use Pallets and Crates with different types (Spawnable, Level)
+- Export Scenes and Prefabs
+- Build AssetBundles
 
 Check out the [wiki!](https://github.com/freakycheesy/BundlePacker/wiki)
